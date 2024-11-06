@@ -1,0 +1,40 @@
+DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Matemática</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Desafio de Matemática</h1>
+        <div class="difficulty">
+            <label for="difficulty">Escolha a dificuldade:</label>
+            <select id="difficulty">
+                <option value="easy">Fácil</option>
+                <option value="medium">Médio</option>
+                <option value="hard">Difícil</option>
+            </select>
+            <button onclick="startGame()">Começar Jogo</button>
+        </div>
+        
+        <div class="game">
+            <p id="question"></p>
+            <input type="number" id="answer" placeholder="Sua resposta" />
+            <button onclick="checkAnswer()">Responder</button>
+            
+            <p id="feedback"></p>
+            <p>Pontuação: <span id="score">0</span></p>
+        </div>
+        
+        <div class="end-game" style="display: none;">
+            <h2>Fim de Jogo!</h2>
+            <p>Sua pontuação final foi: <span id="final-score">0</span></p>
+            <button onclick="restartGame()">Jogar Novamente</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
